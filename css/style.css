@@ -1,22 +1,53 @@
 @charset "UTF-8";
 
+/* 共通項 */
 .inner {
+  margin: 0 auto;
+  text-align: center;
   width: 1100px;
 }
 
+.inner-title {
+  font-family: 'Raleway';
+  font-size: 24px;
+}
+
+.flex {
+  display: flex;
+}
+
+.hover-transition {
+  transition: all 0.3s;
+}
+
+.btn {
+  background-color: #74cfae;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: #333;
+}
+/* 共通項 */
+
+.wrapper {
+  padding-top: 70px;
+}
+
 .header {
-  background-color: #fff;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  background-color: #fff;
+  z-index: 10;
 }
 
 .header-inner {
   align-items: center;
-  display: flex;
   justify-content: space-between;
-  margin: 0 auto;
   padding: 15px 0;
 }
 
@@ -25,16 +56,8 @@
   font-size: 40px;
 }
 
-.header-inner__btn {
-  background-color: #74cfae;
-  font-size: 12px;
+.header .btn {
   padding: 14px 12px;
-  text-decoration: none;
-}
-
-.header-inner__btn:hover {
-  color: #333;
-  transition: all 0.3;
 }
 
 .header-inner__hamburger {
@@ -44,13 +67,9 @@
 .bolt-theme {
   background-color: #f2f2f2;
   position: relative;
-  text-align: center;
-  width: 100%;
 }
 
 .bolt-theme-inner {
-  display: inline-block;
-  margin: 0 auto;
   padding: 250px 0;
 }
 
@@ -68,14 +87,10 @@
 
 .section {
   background-color: #74cfae;
-  width: 100%;
 }
 
 .section-inner {
-  display: flex;
-  margin: 0 auto;
   padding-top: 50px;
-  text-align: center;
 }
 
 .section-inner-context {
@@ -83,32 +98,25 @@
   margin-left: 240px;
 }
 
-.section-inner-context__title {
-  font-family: 'Raleway';
-  font-size: 24px;
-  padding-bottom: 35px;
+.section .inner-title {
+  margin-bottom: 35px;
 }
 
 .section-inner-context__paragraph {
   font-size: 20px;
+  line-height: 24px;
 }
 
 .article {
   background-color: #f2f2f2;
-  display: inline-block;
-  text-align: center;
-  width: 100%;
 }
 
 .article-inner {
-  margin: 0 auto;
   padding: 60px 0 70px 0;
 }
 
-.article-title {
-  font-family: 'Raleway';
-  font-size: 24px;
-  padding-bottom: 40px;
+.article .inner-title {
+  margin-bottom: 40px;
 }
 
 .article-images {
@@ -116,22 +124,23 @@
   text-align: center;
 }
 
-.article-images__img {
-  opacity: 0.7;
-  margin: 0 0 100px 80px;
+.article-images > img {
   cursor: pointer;
+  margin: 0 0 100px 80px;
+  opacity: 0.7;
+  transition: all 0.3s;
 }
 
-.article-images__img:hover {
+.article-images > img:hover {
   opacity: 1;
   transition: all 0.3s;
 }
 
-.article-images__img:nth-child(3n+1) {
+.article-images > img:nth-child(3n+1) {
   margin-left: 0;
 }
 
-.article-images__img:nth-child(n+4) {
+.article-images > img:nth-child(n+4) {
   margin-bottom: 0;
 }
 
@@ -142,90 +151,67 @@
 
 .article-content__paragraph {
   display: inline-block;
-  font-size: 16px;
-  padding-right: 90px;
-  vertical-align: top;
-  width: 460px;
+  font-size: 18px;
+  margin-right: 90px;
+  line-height: 24px;
+  width: 520px;
 }
 
-.article-content__btn {
-  background-color: #74cfae;
-  color: #fff;
-  font-size: 12px;
-  display: inline-block;
+.article .btn {
   padding: 14px 20px;
-  text-decoration: none;
   vertical-align: top;
-}
-
-.article-content__btn:hover {
-  color: #333;
-  transition: all 0.3s;
 }
 
 .our-skills {
   background-color: #4e4e4e;
-  text-align: center;
-  width: 100%;
 }
 
 .our-skills-inner {
-  margin: 0 auto;
+  color: #f2f2f2;
   padding: 70px 0 100px 0;
 }
 
-.our-skills__title {
-  color: #f2f2f2;
-  font-family: 'Raleway';
-  font-size: 24px;
-}
-
 .our-skills-figure {
-  color: #f2f2f2;
   font-size: 0;
-  padding-top: 70px;
+  margin-top: 70px;
 }
 
-.our-skills-figure__content {
+.our-skills-figure > figure {
   display: inline-block;
-  padding-left: 180px;
+  margin-left: 180px;
 }
 
-.our-skills-figure__content:first-child {
-  padding-left: 0;
+.our-skills-figure > figure:first-child {
+  margin-left: 0;
 }
 
-.our-skills__paragraph {
+.our-skills-figure > figure > figcaption {
   font-size: 16px;
-  padding-top: 16px;
+  margin-top: 16px;
 }
 
 .nav {
   background-color: #f2f2f2;
-  width: 100%;
-}
-.nav-inner {
-  font-size: 0;
-  margin: 0 auto;
-  padding: 200px 0;
-  text-align: center;
 }
 
-.sns-hover {
+.nav-inner {
+  font-size: 0;
+  padding: 200px 0;
+}
+
+.nav-inner > a {
   color: #74cfae;
   display: inline-block;
   padding: 30px 0;
-  text-decoration: none;
+  width: 185px;
 }
 
-.sns-hover:hover {
+.nav-inner > a:hover {
   background-color: #fff;
 }
 
-.sns-hover__icon {
+.nav-inner > a > i {
   font-size: 36px;
-  text-align: center;
-  width: 185px;
 }
 
 .footer {
@@ -233,14 +219,12 @@
 }
 
 .footer-inner {
-  margin: 0 auto;
   padding: 20px 0 25px 0;
   text-align: right;
 }
 
 .footer-context {
   color: #fff;
-  display: inline-block;
   font-size: 12px;
 }
 
@@ -257,51 +241,53 @@
 
   .section-inner-context {
     margin: 0 auto;
+    width: 80%;
   }
 
-  .section-inner-context__title {
-    padding-top: 20px;
+  .section .inner-title {
+    margin-top: 20px;
   }
 
   .article-content {
     margin-top: 80px;
   }
 
-  .article-images .article-images__img {
+  .article .article-images > img {
     display: block;
     margin: 0 auto;
   }
 
-  .article-images__img:nth-child(4) {
-    margin-top: 80px;
+  .article-images > img:nth-child(3) {
+    margin-bottom: 80px;
   }
 
   .article-content__paragraph {
-    margin: 0 auto;
-    padding-bottom: 40px;
-    width: 100%;
-  }
-
-  .our-skills-figure__content {
     display: block;
-    padding: 0 0 88px 0;
+    margin: 0 auto 40px;
+    width: 80%;
   }
 
-  .our-skills-figure__content:last-child {
-    padding: 0;
+  .our-skills-inner .our-skills-figure > figure {
+    display: block;
+    margin: 0 auto 88px;
+  }
+
+  .our-skills-figure > figure:last-child {
+    margin-bottom: 0;
   }
 
 }
 
 @media screen and (max-width: 767px) {
 
-  .header-inner__btn {
+  .header-inner .btn {
     display: none;
   }
 
   .header-inner__hamburger {
     border: solid 1px #ddd;
     border-radius: 4px;
+    color: #ddd;
     display: inline-block;
     font-size: 12px;
     padding: 10px;
@@ -315,8 +301,9 @@
     padding: 50px 0;
   }
 
-  .sns-hover {
-    display: block;
+  .nav-inner > a {
+    display: inline-block;
+    width: 100%;
   }
 
 }
