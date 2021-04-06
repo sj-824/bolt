@@ -31,6 +31,11 @@
 .btn:hover {
   color: #333;
 }
+
+.background-color__gray {
+  background-color: #f2f2f2;
+}
+
 /* 共通項 */
 
 .wrapper {
@@ -65,7 +70,6 @@
 }
 
 .bolt-theme {
-  background-color: #f2f2f2;
   position: relative;
 }
 
@@ -105,10 +109,6 @@
 .section-inner-context__paragraph {
   font-size: 20px;
   line-height: 24px;
-}
-
-.article {
-  background-color: #f2f2f2;
 }
 
 .article-inner {
@@ -188,10 +188,6 @@
 .our-skills-figure > figure > figcaption {
   font-size: 16px;
   margin-top: 16px;
-}
-
-.nav {
-  background-color: #f2f2f2;
 }
 
 .nav-inner {
