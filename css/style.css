@@ -40,6 +40,10 @@ body {
   background-color: #f2f2f2;
 }
 
+.image {
+  vertical-align: top;
+}
+
 /* 共通項 */
 
 .wrapper {
@@ -107,12 +111,9 @@ body {
   margin-left: 240px;
 }
 
-.section .inner-title {
-  margin-bottom: 35px;
-}
-
 .section-inner-context__paragraph {
   font-size: 20px;
+  margin-top: 35px;
   line-height: 24px;
 }
 
@@ -120,34 +121,31 @@ body {
   padding: 60px 0 70px 0;
 }
 
-.article .inner-title {
-  margin-bottom: 40px;
-}
-
 .article-images {
+  margin-top: 40px;
   font-size: 0;
   text-align: center;
 }
 
-.article-images > a {
+.article-images > ul > li {
   cursor: pointer;
   display: inline-block;
-  margin: 0 0 100px 80px;
+  margin: 100px 0 0 80px;
   opacity: 0.7;
   transition: all 0.3s;
 }
 
-.article-images > a:hover {
+.article-images > ul > li:hover {
   opacity: 1;
   transition: all 0.3s;
 }
 
-.article-images > a:nth-child(3n+1) {
+.article-images > ul > li:nth-child(3n+1) {
   margin-left: 0;
 }
 
-.article-images > a:nth-child(n+4) {
-  margin-bottom: 0;
+.article-images > ul > li:nth-child(-n+3) {
+  margin-top: 0;
 }
 
 .article-content {
@@ -158,12 +156,12 @@ body {
 .article-content__paragraph {
   display: inline-block;
   font-size: 18px;
-  margin-right: 90px;
   line-height: 24px;
   width: 520px;
 }
 
 .article .btn {
+  margin-left: 90px;
   padding: 14px 20px;
   vertical-align: top;
 }
@@ -178,20 +176,19 @@ body {
 }
 
 .our-skills-figure {
-  font-size: 0;
   margin-top: 70px;
 }
 
-.our-skills-figure > figure {
+.our-skills-figure > ul > li {
   display: inline-block;
   margin-left: 180px;
 }
 
-.our-skills-figure > figure:first-child {
+.our-skills-figure > ul > li:first-child {
   margin-left: 0;
 }
 
-.our-skills-figure > figure > figcaption {
+.our-skills-figure > ul > li > figure > figcaption {
   font-size: 16px;
   margin-top: 16px;
 }
@@ -201,18 +198,19 @@ body {
   padding: 200px 0;
 }
 
-.nav-inner > a {
-  color: #74cfae;
+.nav-inner > ul > li {
+  cursor: pointer;
   display: inline-block;
   padding: 30px 0;
   width: 185px;
 }
 
-.nav-inner > a:hover {
+.nav-inner > ul > li:hover {
   background-color: #fff;
 }
 
-.nav-inner > a > i {
+.nav-inner > ul > li > a > i {
+  color: #74cfae;
   font-size: 36px;
 }
 
@@ -259,8 +257,8 @@ body {
     margin: 0 auto;
   }
 
-  .article-images > a:nth-child(3) {
-    margin-bottom: 80px;
+  .article-images > a:nth-child(4) {
+    margin-top: 80px;
   }
 
   .article-content__paragraph {
@@ -271,11 +269,11 @@ body {
 
   .our-skills-inner .our-skills-figure > figure {
     display: block;
-    margin: 0 auto 88px;
+    margin: 88px auto 0;
   }
 
-  .our-skills-figure > figure:last-child {
-    margin-bottom: 0;
+  .our-skills-figure > figure:first-child {
+    margin-top: 0;
   }
 
 }
