@@ -5,6 +5,10 @@ body {
   font-family: 'Lato';
 }
 
+a {
+  display: inline-block;
+}
+
 img {
   vertical-align: top;
 }
@@ -31,7 +35,6 @@ img {
 .btn {
   background-color: #74cfae;
   color: #fff;
-  display: inline-block;
   font-size: 12px;
   text-decoration: none;
 }
@@ -74,11 +77,33 @@ img {
 }
 
 .header-inner__hamburger {
+  border: solid 1px #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
   display: none;
+  padding: 10px;
+  position: relative;
+  height: 40px;
+  width: 50px;
 }
 
-.bolt-theme {
-  position: relative;
+.header-inner__hamburger > span {
+  background-color: #ddd;
+  border-radius: 2px;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translate(-50%, -50%);
+  height: 2px;
+  width: 20px;
+}
+
+.header-inner__hamburger > span:first-child {
+  top: 14px;
+}
+
+.header-inner__hamburger > span:last-child {
+  top: 26px;
 }
 
 .bolt-theme-inner {
@@ -93,7 +118,6 @@ img {
 
 .bolt-theme__context {
   color: #c0c0c0;
-  font-family: 'Raleway';
   font-size: 30px;
   margin-top: 20px;
 }
@@ -123,21 +147,20 @@ img {
 
 .article-images {
   margin-top: 40px;
-  font-size: 0;
-  text-align: center;
 }
 
 .article-images > li {
-  cursor: pointer;
   display: inline-block;
   margin: 100px 0 0 80px;
-  opacity: 0.7;
-  transition: all 0.3s;
 }
 
-.article-images > li:hover {
+.article-images > li > a {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.article-images > li > a:hover {
   opacity: 1;
-  transition: all 0.3s;
 }
 
 .article-images > li:nth-child(3n+1) {
@@ -199,13 +222,16 @@ img {
 }
 
 .nav-sns > li {
-  cursor: pointer;
   display: inline-block;
+}
+
+.nav-sns > li > a {
+  cursor: pointer;
   padding: 30px 0;
   width: 185px;
 }
 
-.nav-sns > li:hover {
+.nav-sns > li > a:hover {
   background-color: #fff;
 }
 
@@ -240,12 +266,8 @@ img {
   }
 
   .section-inner-context {
-    margin: 0 auto;
+    margin: 20px auto 0;
     width: 80%;
-  }
-
-  .section .inner-title {
-    margin-top: 20px;
   }
 
   .article-content {
@@ -289,12 +311,7 @@ img {
   }
 
   .header-inner__hamburger {
-    border: solid 1px #ddd;
-    border-radius: 4px;
-    color: #ddd;
     display: inline-block;
-    font-size: 12px;
-    padding: 10px;
   }
 
   .bolt-theme-inner {
@@ -306,6 +323,10 @@ img {
   }
 
   .nav-sns > li {
+    display: block;
+  }
+
+  .nav-sns > li > a {
     width: 100%;
   }
 
