@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
 /* 共通項 */
+body {
+  font-family: 'Lato';
+}
+
 .inner {
   margin: 0 auto;
   text-align: center;
